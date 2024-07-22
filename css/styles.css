@@ -1,0 +1,610 @@
+/* Import Frankfurter Inline font (if not already imported) */
+@import url('https://fonts.googleapis.com/css2?family=Frankfurter+Inline&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1em 7%; /* Add padding on both sides */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    height: 50px; /* Adjust height as needed */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+    flex: 1; /* Take remaining space */
+    text-align: left; /* Align text to the left */
+}
+
+header nav {
+    flex: 1; /* Take remaining space */
+    text-align: right; /* Align navigation to the right */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; /* Adjust navigation items to the right */
+}
+
+header nav ul li {
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #f39c12; /* Orange */
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+    }
+
+    header .logo {
+        margin-bottom: 10px; /* Adjust margin for spacing */
+    }
+
+    header h1 {
+        text-align: center; /* Center align text on smaller screens */
+        margin: 10px 0;
+    }
+
+    header nav {
+        width: 100%;
+        text-align: center; /* Center align navigation items */
+    }
+
+    header nav ul {
+        justify-content: center; /* Center align navigation items */
+    }
+
+    header nav ul li {
+        margin: 0 0.5em;
+    }
+}
+
+
+.hero {
+    position: relative;
+    background: url('../images/hero3.jpeg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 8px;
+    margin-bottom: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    border-radius: 8px;
+    z-index: 1; /* Place overlay above background image */
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 10px; /* Adjust padding for better readability */
+    position: relative; /* Ensure text is on top of overlay */
+    z-index: 2; /* Ensure text is above overlay */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for text */
+    border-radius: 8px;
+    display: inline-block; /* Ensure inline display for padding to take effect */
+    
+}
+
+.hero p {
+    font-size: 2.5em;
+    margin-top: 5px; /* Add margin to separate from h1 */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 10px; /* Adjust padding for better readability */
+    position: relative; /* Ensure text is on top of overlay */
+    z-index: 2; /* Ensure text is above overlay */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for text */
+    border-radius: 8px;
+    display: block; /* Ensure block display for padding to take effect */
+    font-family: 'Frankfurter Inline', cursive; /* Apply Frankfurter Inline font */
+}
+
+
+
+section h2 {
+    font-size: 2em;
+    color: #f39c12; /* Orange */
+    border-bottom: 2px solid #f39c12; /* Orange */
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 0.5em 0;
+}
+
+.about, .vision-mission, .core-values, .services, .expertise, .impact, .contact {
+    margin: 20px 0;
+}
+
+.about h2, .vision-mission h2, .core-values h2, .services h2, .expertise h2, .impact h2, .contact h2 {
+    color: #f39c12; /* Orange */
+    margin-bottom: 1rem;
+}
+.core-values ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.core-values li {
+    background: #f0f0f1; /* Orange */
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    border-left: 5px solid #f39c12; /* Black */
+}
+
+.core-values li::before {
+    content: attr(data-bolded-word) ": "; /* Use attribute to store bolded word */
+    font-weight: bold;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+    color: #f39c12; /* Orange */
+    margin-top: 0;
+}
+
+.service-item p {
+    margin-bottom: 10px;
+}
+
+.special-offer {
+    background-color: #f39c12; /* Orange background for special offer */
+    color: #fff; /* White text for special offer */
+    border: 2px solid #000; /* Black border for special offer */
+}
+
+.special-offer h3 {
+    color: #fff; /* White text for special offer */
+}
+
+.special-offer p {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+
+
+.blog-listing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blog-item {
+    width: 45%;
+    background: #f9f9f9;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.blog-item p {
+    font-size: 0.9em;
+}
+
+.read-more-btn, .main-blog-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #f39c12;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .read-more-btn:hover {
+            background-color: #d87b0d;
+        }
+        .main-blog-btn {
+            display: block;
+            width: max-content;
+            margin: 20px auto 0 auto;
+            background-color: #000;
+            color: #fff;
+        }
+        .main-blog-btn:hover {
+            background-color: #d87b0d;
+        }
+        .blog-item {
+            text-align: center;
+        }
+
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form label {
+    margin-top: 1em;
+}
+
+form input, form textarea {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form button {
+    padding: 1em;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #f39c12; /* Orange */
+}
+
+/* Form Validation */
+form input:invalid, form textarea:invalid {
+    border-color: #f39c12; /* Orange */
+}
+
+form input:focus, form textarea:focus {
+    border-color: #000;
+    outline: none;
+}
+
+/* Who We Are Section */
+.who-we-are-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.who-we-are-image-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.who-we-are-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.who-we-are-text {
+    flex: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 1em;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 0.5em 0;
+    }
+
+    .blog-item {
+        width: 100%;
+    }
+
+    .who-we-are-content {
+        flex-direction: column;
+    }
+
+    .who-we-are-image-container {
+        max-width: 100%;
+    }
+}
+
+/* Adjustments for additional elements */
+/* Link Colors */
+a {
+    color: #000; /* Black */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #f39c12; /* Orange */
+}
+
+/* Section Backgrounds */
+section {
+    background-color: #fff;
+    padding: 2em;
+    margin-bottom: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography Consistency */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Additional consistency for buttons and inputs */
+button, input, textarea {
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+}
+
+/* Footer Link Colors */
+footer a {
+    color: #f39c12; /* Orange */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff; /* White */
+}
+
+
+/* Privacy Policy Page Styles */
+
+.privacy-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-container h1, .privacy-container h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.privacy-container h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.privacy-container p {
+    margin-bottom: 15px;
+}
+
+.privacy-container ul {
+    margin-bottom: 15px;
+}
+
+.privacy-container ul li {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.privacy-container a {
+    color: #007bff;
+}
+
+.privacy-container a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Blog Post Styles */
+.blog-post {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post header {
+    margin-bottom: 20px;
+    background-color: #f39c12; /* Orange background color */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Padding adjustment */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.blog-post header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.blog-post header p {
+    font-size: 0.9em;
+    color: #ffffff;
+    margin-top: 5px; /* Separate the paragraph from the heading */
+}
+
+.blog-post header p small {
+    color: #ffffff; /* White text color for author details */
+}
+
+.blog-post header p small a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.blog-post header p small a:hover {
+    color: #000000;
+}
+
+.blog-post article {
+    line-height: 1.6;
+}
+
+.blog-post article p {
+    margin-bottom: 1em;
+}
+
+.blog-post article ul {
+    margin-bottom: 1em;
+    padding-left: 20px;
+}
+
+.blog-post article ul li {
+    margin-bottom: 0.5em;
+}
+
+.blog-post footer {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 0.8em;
+    color: #999999;
+}
+
+.blog-post footer a {
+    color: #f39c12;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.blog-post footer a:hover {
+    color: #000000;
+}
+
+/* Responsive Design for Blog Posts */
+@media (max-width: 768px) {
+    .blog-post {
+        padding: 15px;
+    }
+
+    .blog-post header h1 {
+        font-size: 2em;
+    }
+
+    .blog-post header p {
+        font-size: 0.95em;
+    }
+
+    .blog-post footer {
+        font-size: 0.75em;
+    }
+}
