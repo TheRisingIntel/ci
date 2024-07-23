@@ -107,7 +107,7 @@ header nav ul li a:hover {
 
 .hero {
     position: relative;
-    background: url('../images/hero3.JPG') no-repeat center center;
+    background: url('../images/hero3.jpg') no-repeat center center;
     background-size: cover;
     color: #fff;
     text-align: center;
